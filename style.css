@@ -1,0 +1,77 @@
+/* 
+  Project: Social Media Icons v1.1
+  Created: Sunday, 6 March 2022
+  Author: Jamshid Elmi 
+  Tutorial: https://youtu.be/jjL94qOTTbo
+*/
+body {
+  background-color: #e1e1e1;
+  margin: 0;
+}
+
+.social-btns .btn {
+  display: inline-block;
+  background-color: white;
+  width: 90px;
+  height: 90px;
+  line-height: 90px;
+  margin: 10px;
+  position: relative;
+  overflow: hidden; /* comment for see before */ 
+  border-radius: 30%;
+  box-shadow: 0 5px 15px -5px #00000022;
+  cursor: pointer;
+}
+
+.social-btns .btn ion-icon {
+  font-size: 38px;
+  vertical-align: middle;
+}
+
+.social-btns {
+  height: 90px;
+  margin: auto;
+  font-size: 0;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.social-btns .btn ion-icon {
+  color: var(--color);
+}
+
+/* BG before */
+.social-btns .btn:before {
+  content: '';
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  background-color: var(--color);
+  transform: rotate(45deg);
+}
+.social-btns .btn:before {
+  top: 90%;
+  left: -110%;
+}
+.social-btns .btn:focus:before,
+.social-btns .btn:hover:before {
+  top: -10%;
+  left: -10%;
+}
+
+.social-btns .btn:hover ion-icon {
+  color: #fff;
+  transform: scale(1.3);
+}
+
+.social-btns .btn,
+.social-btns .btn:before,
+.social-btns .btn ion-icon {
+  transition: all 0.35s;
+  transition-timing-function: 
+    cubic-bezier(0.31, -0.105, 0.43, 1.59);
+}
